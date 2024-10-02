@@ -164,7 +164,7 @@ function getPerfectPartner($surname, $name, $patronomyc, $massName) // Идеа�
     $firstHuman = getGenderFromName($newStrFio); // определяем пол ФИО (первых 3 входных параметров функции)
     $chooseHuman = $massName[rand(0, count($massName)-1)]['fullname']; // выбираем случайно из нашего массива строку ФИО 
     $secondHuman = getGenderFromName($chooseHuman); // оопределяем пол выбранного случайно ФИО
-    if($firstHuman !== $secondHuman && $secondHuman !== 0) // если пол разный у двух ФИО и нету неопределенных
+    if($firstHuman !== $secondHuman && $secondHuman !== 0) // если пол у двух ФИО разный и нету неопределенных
     {
        return getShortName($newStrFio) . ' + ' . getShortName($chooseHuman) . ' = ' . '<br>' .  '♡ Идеально на ' . rand(50, 100) . '% ♡'; // то значит всё хорошо
     } 
@@ -172,4 +172,4 @@ function getPerfectPartner($surname, $name, $patronomyc, $massName) // Идеа�
     return getShortName($newStrFio) . ' + ' . getShortName($chooseHuman) . ' = ' . '<br>' .  'не судьба быть вместе!'; // иначе всё плохо
 }
 
-print_r(getPerfectPartner('ИваНов', 'Иван', 'иванович',$example_persons_array));
+// print_r(getPerfectPartner('ИваНов', 'Иван', 'иванович',$example_persons_array));
